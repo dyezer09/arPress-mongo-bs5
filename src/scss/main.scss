@@ -1,0 +1,33 @@
+@import "mygrid.scss";
+
+h1{
+    background-color: aqua;
+}
+
+.block{
+    background-color: blanchedalmond;
+    border: solid 1px #aaa;
+    text-align: center;
+    height: 100%;
+}
+
+.container{
+    @include make-container();
+   // max-width: 1340px;
+}
+
+.header{
+    @include make-row();
+    //min-height: 90px;
+    margin-bottom: 130px; 
+
+&__home{
+    @include make-col-ready();  
+    @include make-col(6);
+}   
+
+&__all{
+    @include make-col-ready();
+    @include make-col(5);    
+}
+}

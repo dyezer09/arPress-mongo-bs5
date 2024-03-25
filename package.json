@@ -1,0 +1,24 @@
+{
+  "name": "arpress-mongo-bs5",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss:dist/css",
+    "dev": "node --watch --trace-warnings src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "express-handlebars": "^7.1.2",
+    "sass": "^1.71.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "express": "^4.18.2",
+    "mongodb": "^6.4.0"
+  }
+}
