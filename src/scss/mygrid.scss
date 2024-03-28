@@ -1,8 +1,8 @@
 $grid-columns: 12;
 
-$grid-gutter-width: 1.5rem;
+$grid-gutter-width: 1.0rem;
 
-
+/*
 $grid-breakpoints:(
     z: 0,
     lt: 576px,
@@ -14,8 +14,8 @@ $container-max-widths:(
     sm: 540px,
     md: 960px,
     xl: 1420px
-);
-
+);*/
+//@import "../../node_modules/bootstrap/scss/bootstrap-grid.scss";
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins/breakpoints";

@@ -14,8 +14,8 @@ const app = express();
 
 const __filename = fileURLToPath(import.meta.url) // get path to app.js
 const __dirname = path.dirname(__filename) // path to app.js whithout app.js
-app.use(express.static(path.join(__dirname, "")))
-console.log(__filename)
+//app.use(express.static(path.join(__dirname, "")))
+console.log(__dirname)
 
 
 
@@ -74,23 +74,22 @@ app.engine('.hbs', engine({
 	      const database = client.db('arPress');
 		  const movies = database.collection('measurements');			
 		  let movie = await movies.find().sort({date: -1}).toArray();
-		  let str = "";
-  		  let str1 = "";
+
+		  let dt = new Array();
+		  let up = new Array();
+		  let lw = new Array();
+		  let pl = new Array();
+		  let wd = new Array();
 		  movie.forEach(element => {
-			str1 =
-			element.date +
-   		    " " +
-			element.upper +
-            " " +
-            element.lower +
-            " " +
-            element.pulse +
-            " " +
-            element.weight;
-			str = str + str1 + "<hr>";
-		  });
-		  res.send(str);
+			dt.push(element.date);
+			up.push(element.upper);
+			lw.push(element.lower);
+			pl.push(element.pulse);
+			wd.push(element.weight);
+
+		  });	  
 		  console.log('qwq');
+		  res.render("pages/all", { layout: "main",age: up[1]} );
 		} finally {
 		  // Ensures that the client will close when you finish/error
 		  await client.close();
@@ -105,6 +104,9 @@ app.engine('.hbs', engine({
 
 
 /* ---- */
+
+
+
 
 
 

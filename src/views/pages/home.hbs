@@ -1,39 +1,58 @@
+
+
+
     <form action="/" method="post">
-        <label>дата</label><br />
-        <input
-            type="date"
-            value="2023-01-01"
-            name="date"
-        />
-        <br>
-        <label>верхнее давление</label><br />
-        <input
-            type="number"
-            value=""
-            name="upper"
-        />
-        <br>
-        <label>нижнее давление</label><br />
-        <input
-            type="number"
-            value=""
-            name="lower"
-        />
-        <br>
-        <label>пульс</label><br />
-        <input
-            type="number"
-            value=""
-            name="pulse"
-        />
-        <br>
-        <label>вес</label><br />
-        <input
-            type="number"
-            value=""
-            name="weight"
-        />
-        
-        <br>
+    <div class="measurement row">
+        <div class="measurement__date">
+            <div class="block">
+                <label>дата: </label>
+                <input
+                type="date"
+                value="2023-01-01"
+                name="date"
+                />
+            </div>
+        </div>
+        <div class="measurement__upper">
+            <div class="block">
+                <label>верхнее давление: </label>
+                <input
+                type="number"
+                value=""
+                name="upper"
+                />
+            </div>
+        </div>
+        <div class="measurement__lower">
+            <div class="block">
+                <label>нижнее давление: </label>
+                <input
+                type="number"
+                value=""
+                name="lower"
+                />
+            </div>
+        </div>
+        <div class="measurement__pulse">
+            <div class="block">
+                <label>пульс</label><br />
+                <input
+                type="number"
+                value=""
+                name="pulse"
+                />
+            </div>
+        </div>
+        <div class="measurement__">
+            <div class="block">
+                <label>вес</label><br />
+                <input
+                type="number"
+                value=""
+                name="weight"
+                />
+            </div>
+        </div>
+    </div>
         <input type="submit" />
-        </form>
+    </form>       
