@@ -37,7 +37,7 @@ body{
 }
 
 .header{
-    
+    font-size: 150%;
     &__nav{
         background-color: rgb(255, 57, 57);
         @include col(10);
@@ -49,6 +49,7 @@ body{
 
     @include bp(sm){   
    &__entry{
+    font-size: 150%;
     @include col(20);   
     margin-bottom: 10px; 
     background-color: #dad9d9;
@@ -57,6 +58,7 @@ body{
    }
    @include bp(lg){ 
    &__entry{
+    font-size: 100%;
     @include col(4);    
    }
    }
@@ -73,10 +75,24 @@ body{
 .field{
     @include bp(sm){
         background-color:aquamarine;
-        @include col(20);
+        font-size: 150%;
+        @include col(4);
     }
     @include bp(lg){
+        font-size: 100%;
         background-color:aquamarine;
         @include col(4);
+    }
+}
+.send{
+    @include bp(sm){
+        width: 150px;
+        height: 50px;
+        margin-left:42%;
+    }
+    @include bp(lg){
+        width: 100px;
+        height: 30px;
+        margin-left: 0; 
     }
 }
