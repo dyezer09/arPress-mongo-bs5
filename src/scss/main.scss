@@ -10,6 +10,9 @@ html,body{
     font-size: 22px;
 
 }
+body{
+    background-color: #eceaea;
+}
 
 
 .block{
@@ -20,8 +23,12 @@ html,body{
 }
 
 .container{
+    background-color: #ffffff;
+    padding-bottom: 30px;
+    border:solid 1px;
     @include container;
     max-width: 1540px;
+    
 }
 
 .row{
@@ -31,39 +38,36 @@ html,body{
 
 .header{
     
-    /*max-width: 1200px;
-    min-height: 90px;
-    margin-bottom: 130px; */
-
-&__home{
-    background-color: rgb(255, 57, 57);
-    @include col(10);
-}   
-
-&__all{
-    background-color: rgb(255, 57, 57);
-    @include col(10);    
-}
+    &__nav{
+        background-color: rgb(255, 57, 57);
+        @include col(10);
+    }   
 }
 
 .measurement{
-   @include row;
-   &__date{
+    
+
+    @include bp(sm){   
+   &__entry{
+    @include col(20);   
+    margin-bottom: 10px; 
+    background-color: #dad9d9;
+   }
+
+   }
+   @include bp(lg){ 
+   &__entry{
     @include col(4);    
    }
-   &__upper{
-    @include col(4);    
-   }
-   &__lower{
-    @include col(4);    
-   }
-   &__pulse{
-    @include col(4);    
-   }
-   &__weight{
-    @include col(4);    
    }
 }
+
+.table{
+    background-color: #aaa;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
 
 .field{
     background-color:aquamarine;
