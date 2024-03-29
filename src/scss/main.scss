@@ -65,11 +65,18 @@ body{
 .table{
     background-color: #aaa;
     margin-bottom: 10px;
-    padding-top: 10px;
+    padding-top: 10px;  
+    margin-right: 20px;
 }
 
 
 .field{
-    background-color:aquamarine;
-    @include col(4);
+    @include bp(sm){
+        background-color:aquamarine;
+        @include col(20);
+    }
+    @include bp(lg){
+        background-color:aquamarine;
+        @include col(4);
+    }
 }
